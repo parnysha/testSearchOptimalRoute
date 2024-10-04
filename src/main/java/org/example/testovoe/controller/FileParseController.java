@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.example.testovoe.place.OptimalRoute;
 import org.example.testovoe.service.FindOptimalRoute;
 import org.springframework.web.bind.annotation.*;
-
 import com.groupdocs.parser.exceptions.System.IO.FileNotFoundException;
 
 
@@ -13,7 +12,6 @@ import com.groupdocs.parser.exceptions.System.IO.FileNotFoundException;
 @RequestMapping("/api")
 public class FileParseController {
     private final FindOptimalRoute findOptimalRoute;
-
     @GetMapping("/parse/{fileName}")
     public OptimalRoute findRoute(@PathVariable String fileName) throws FileNotFoundException{
         return findOptimalRoute.find(fileName);
